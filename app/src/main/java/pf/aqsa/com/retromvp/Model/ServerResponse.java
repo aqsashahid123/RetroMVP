@@ -1,0 +1,66 @@
+package pf.aqsa.com.retromvp.Model;
+
+import com.google.gson.annotations.SerializedName;
+
+/**
+ * Created by Mahek on 1/12/2018.
+ */
+
+public class ServerResponse implements ServerResponseInterface{
+
+
+    @SerializedName("returned_username")
+    private String username;
+    @SerializedName("returned_password")
+    private String password;
+    @SerializedName("message")
+    private String message;
+    @SerializedName("response_code")
+    private int responseCode;
+
+    public ServerResponse(String username, String password, String message, int responseCode){
+        this.username = username;
+        this.password = password;
+        this.message = message;
+        this.responseCode = responseCode;
+    }
+
+
+
+    /////////////////////////
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    @Override
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public int getResponseCode() {
+        return responseCode;
+    }
+
+    public void setResponseCode(int responseCode) {
+        this.responseCode = responseCode;
+    }
+
+
+
+}
