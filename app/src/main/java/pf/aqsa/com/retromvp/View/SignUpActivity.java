@@ -1,4 +1,4 @@
-package pf.aqsa.com.retromvp;
+package pf.aqsa.com.retromvp.View;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,16 +8,15 @@ import android.widget.EditText;
 
 import pf.aqsa.com.retromvp.Presenter.LoginPresenter;
 import pf.aqsa.com.retromvp.Presenter.LoginPresenterCompl;
-import pf.aqsa.com.retromvp.Presenter.ViewPresenterCompl;
+import pf.aqsa.com.retromvp.R;
 import pf.aqsa.com.retromvp.View.IView;
-import pf.aqsa.com.retromvp.View.ViewPresenter;
 
 public class SignUpActivity extends AppCompatActivity {
     EditText etEmail,etPassword;
     Button btnSignup;
     // LoginPresenter presenter;
     LoginPresenter presenter;
-    ViewPresenter viewPresenter;
+  //  ViewPresenter viewPresenter;
     IView iv;
     //   LoginPresenterCompl l
     EditText etUserName;

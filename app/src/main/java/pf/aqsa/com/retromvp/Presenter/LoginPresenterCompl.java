@@ -9,14 +9,12 @@ import android.widget.Toast;
 
 import com.squareup.otto.Produce;
 
-import pf.aqsa.com.retromvp.HomeScreen;
+import pf.aqsa.com.retromvp.View.HomeScreen;
 import pf.aqsa.com.retromvp.Model.ErrorEvent;
 import pf.aqsa.com.retromvp.Model.ServerEvent;
 import pf.aqsa.com.retromvp.Model.ServerResponse;
-import pf.aqsa.com.retromvp.Service.RemoteInterface;
-import pf.aqsa.com.retromvp.Service.RemoteService;
+import pf.aqsa.com.retromvp.Model.RemoteInterface;
 import pf.aqsa.com.retromvp.View.IView;
-import pf.aqsa.com.retromvp.View.IViewClass;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

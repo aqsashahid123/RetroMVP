@@ -1,9 +1,7 @@
-package pf.aqsa.com.retromvp.View;
+package pf.aqsa.com.retromvp.Presenter;
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Context;
-import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,10 +10,9 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import pf.aqsa.com.retromvp.HomeScreen;
-import pf.aqsa.com.retromvp.Presenter.HomeScreenBasicMethods;
-import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenter;
+import pf.aqsa.com.retromvp.View.HomeScreen;
 import pf.aqsa.com.retromvp.R;
+import pf.aqsa.com.retromvp.View.PagerAdapter;
 
 /**
  * Created by AQSA SHaaPARR on 1/13/2018.

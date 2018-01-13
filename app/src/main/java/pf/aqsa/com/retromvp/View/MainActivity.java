@@ -1,6 +1,5 @@
-package pf.aqsa.com.retromvp;
+package pf.aqsa.com.retromvp.View;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,13 +10,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenter;
-import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenterCompl;
 import pf.aqsa.com.retromvp.Presenter.LoginPresenter;
 import pf.aqsa.com.retromvp.Presenter.LoginPresenterCompl;
-import pf.aqsa.com.retromvp.View.IView;
-import pf.aqsa.com.retromvp.View.IViewClass;
-import pf.aqsa.com.retromvp.View.ViewPresenter;
-import pf.aqsa.com.retromvp.Presenter.ViewPresenterCompl;
+import pf.aqsa.com.retromvp.R;
+import pf.aqsa.com.retromvp.Presenter.IViewClass;
 
 public class MainActivity extends AppCompatActivity implements HomeScreenPresenter {
 
@@ -28,8 +24,7 @@ public class MainActivity extends AppCompatActivity implements HomeScreenPresent
     boolean loginStatus;
     LoginPresenter presenter;
     TextView tvSignUp;
-    ViewPresenter viewPresenter;
-    HomeScreenPresenterCompl presenterCompl;
+
     IView iv;
     HomeScreenPresenter homeScreenPresenter;
  //   LoginPresenterCompl loginPresenterCompl;
@@ -45,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements HomeScreenPresent
         tvSignUp = (TextView) findViewById(R.id.tvSignUp);
      //  homeScreenPresenter = new HomeScreenPresenterCompl(this);
         final IViewClass iv = new IViewClass();
-        presenterCompl = new HomeScreenPresenterCompl(this);
+        //presenterCompl = new HomeScreenPresenterCompl(this);
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements HomeScreenPresent
                 else {
                   //  homeScreenPresenter.moveToHome();
 //                    presenterCompl.goToHomeScreen();
-                   Toast.makeText(getApplicationContext(),"Die",Toast.LENGTH_SHORT).show();
+                   Toast.makeText(getApplicationContext(),"Login Failed",Toast.LENGTH_SHORT).show();
 
 
 

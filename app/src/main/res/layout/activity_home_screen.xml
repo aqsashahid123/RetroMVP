@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/mDrawer"
-    tools:context="pf.aqsa.com.retromvp.HomeScreen">
+    tools:context="pf.aqsa.com.retromvp.View.HomeScreen">
 
 
 

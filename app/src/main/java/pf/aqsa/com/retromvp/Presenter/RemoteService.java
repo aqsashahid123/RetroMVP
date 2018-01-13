@@ -1,4 +1,4 @@
-package pf.aqsa.com.retromvp.Service;
+package pf.aqsa.com.retromvp.Presenter;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

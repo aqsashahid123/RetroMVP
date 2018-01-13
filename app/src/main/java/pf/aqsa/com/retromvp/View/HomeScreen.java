@@ -1,11 +1,9 @@
-package pf.aqsa.com.retromvp;
+package pf.aqsa.com.retromvp.View;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.GravityCompat;
 
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -17,16 +15,10 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import javax.inject.Inject;
 
 import pf.aqsa.com.retromvp.Presenter.HomeScreenBasicMethods;
-import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenter;
-import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenterCompl;
-import pf.aqsa.com.retromvp.View.HomeScreenViewPresenter;
-import pf.aqsa.com.retromvp.View.PagerAdapter;
-import pf.aqsa.com.retromvp.View.ViewPresenter;
+import pf.aqsa.com.retromvp.Presenter.HomeScreenViewPresenter;
+import pf.aqsa.com.retromvp.R;
 
 public class HomeScreen extends AppCompatActivity  {
 

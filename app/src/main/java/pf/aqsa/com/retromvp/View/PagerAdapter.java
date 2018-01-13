@@ -5,9 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import pf.aqsa.com.retromvp.TabOneFragment;
-import pf.aqsa.com.retromvp.TabThreeFrag;
-import pf.aqsa.com.retromvp.TabTwoFragment;
+import pf.aqsa.com.retromvp.View.Fragments.TabOneFragment;
+import pf.aqsa.com.retromvp.View.Fragments.TabThreeFrag;
+import pf.aqsa.com.retromvp.View.Fragments.TabTwoFragment;
 
 /**
  * Created by Mahek on 1/13/2018.

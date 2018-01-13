@@ -1,4 +1,4 @@
-package pf.aqsa.com.retromvp.Service;
+package pf.aqsa.com.retromvp.Model;
 
 import pf.aqsa.com.retromvp.Model.ServerResponse;
 import retrofit2.Call;

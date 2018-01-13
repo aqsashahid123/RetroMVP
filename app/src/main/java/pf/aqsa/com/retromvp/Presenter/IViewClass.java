@@ -1,10 +1,10 @@
-package pf.aqsa.com.retromvp.View;
+package pf.aqsa.com.retromvp.Presenter;
 
 import android.content.Context;
 import android.content.Intent;
 
-import pf.aqsa.com.retromvp.HomeScreen;
-import pf.aqsa.com.retromvp.SignUpActivity;
+import pf.aqsa.com.retromvp.View.SignUpActivity;
+import pf.aqsa.com.retromvp.View.IView;
 
 /**
  * Created by AQSA SHaaPARR on 1/12/2018.
