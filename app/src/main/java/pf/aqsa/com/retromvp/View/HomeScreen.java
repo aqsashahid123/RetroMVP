@@ -86,15 +86,15 @@ public class HomeScreen extends AppCompatActivity  {
         //SharedPreferences.Editor editor = prefs.edit();
 
 
-        prefs.getString("id","");
+      //  prefs.getString("id","");
 
 
 
-//        tvEmail.setText( prefs.getString("email",""));
-//        tvName.setText( prefs.getString("userName",""));
+        tvEmail.setText( prefs.getString("email",""));
+        tvName.setText( prefs.getString("userName",""));
 ///////////////////////////////////////////////////////////////////////////////////
-        tvEmail.setText( "EMAIL");
-        tvName.setText( "USERNAME");
+//        tvEmail.setText( "EMAIL");
+//        tvName.setText( "USERNAME");
 
 //        nav_view.setNavigationItemSelectedListener(
 //                new NavigationView.OnNavigationItemSelectedListener() {
@@ -121,128 +121,5 @@ public class HomeScreen extends AppCompatActivity  {
 //                });
 
     }
-//
-//    @Override
-//    public void onProfileClicked() {
-//
-//    }
-//
-//    @Override
-//    public void onSettingsClicked() {
-//
-//    }
-//
-//    @Override
-//    public void setUpDrawer() {
-//
-//
-//        setSupportActionBar(mToolbar);
-//        mDrawerToggle = new ActionBarDrawerToggle(
-//                this,
-//                mDrawer,
-//                mToolbar,
-//                R.string.open_drawer,
-//                R.string.close_drawer) {
-//            @Override
-//            public void onDrawerOpened(View drawerView) {
-//                super.onDrawerOpened(drawerView);
-//                hideKeyboard();
-//            }
-//
-//            @Override
-//            public void onDrawerClosed(View drawerView) {
-//                super.onDrawerClosed(drawerView);
-//            }
-//        };
-//        mDrawer.addDrawerListener(mDrawerToggle);
-//        mDrawerToggle.syncState();
-//        setupNavMenu();
-//        mPresenter.onNavMenuCreated();
-//        setupCardContainerView();
-//        mPresenter.onViewInitialized();
 
-
-
-//    }
-
-
-    public void setUpNav(){
-
-
-//        View headerLayout = nav_view.getHeaderView(0);
-//
-//        tvName = (TextView) headerLayout.findViewById(R.id.userName);
-//        tvEmail = (TextView) headerLayout.findViewById(R.id.tvEmail);
-//        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-//        //SharedPreferences.Editor editor = prefs.edit();
-//
-//
-//        prefs.getString("id","");
-//
-//
-//
-//        tvEmail.setText( prefs.getString("email",""));
-//        tvName.setText( prefs.getString("userName",""));
-
-
-    }
-
-//    @Override
-//    public void setTabs(TabLayout tabLayout, final ViewPager viewPager) {
-//
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
-//        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
-//        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-//
-//
-//       PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-//        viewPager.setAdapter(adapter);
-//        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-//        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-//            @Override
-//            public void onTabSelected(TabLayout.Tab tab) {
-//                viewPager.setCurrentItem(tab.getPosition());
-//            }
-//
-//            @Override
-//            public void onTabUnselected(TabLayout.Tab tab) {
-//
-//            }
-//
-//            @Override
-//            public void onTabReselected(TabLayout.Tab tab) {
-//
-//            }
-//        });
-//
-//
-//
-//    }
-
-//    @Override
-//    public void setNaigationItemClickListener(MenuItem item) {
-//        switch (item.getItemId()){
-//
-//            case R.id.nav_profile:
-//                mDrawer.closeDrawer(Gravity.RIGHT);
-//                Toast.makeText(getApplicationContext(),"Profile",Toast.LENGTH_SHORT).show();
-//
-//                break;
-//
-//            case R.id.nav_settings:
-//                mDrawer.closeDrawer(Gravity.RIGHT);
-//                Toast.makeText(getApplicationContext(),"Profile",Toast.LENGTH_SHORT).show();
-//
-//
-//                break;
-//
-//        }
-//
-//    }
-
-//    @Override
-//    public void moveToHome() {
-//
-//    }
 }

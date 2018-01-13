@@ -102,7 +102,7 @@ public class LoginPresenterCompl implements LoginPresenter {
   }
 
     @Override
-    public void doSignUp(String name, String passwd,String userName) {
+    public boolean doSignUp(String name, String passwd,String userName) {
 
 
         RemoteInterface service = RemoteService.getClient().create(RemoteInterface.class);
@@ -118,6 +118,7 @@ public class LoginPresenterCompl implements LoginPresenter {
 
 
                 if (!response.body().getId().isEmpty()){
+                    isLogin = true;
                     onLoginResult(true);
                     SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
                     SharedPreferences.Editor editor= prefs.edit();
@@ -139,7 +140,7 @@ public class LoginPresenterCompl implements LoginPresenter {
                 else {
                     onLoginResult(false);
                     Toast.makeText(context.getApplicationContext(),"User Name or Email already exist",Toast.LENGTH_SHORT).show();
-
+                    isLogin = false;
 
                 }
                 //  SharedPreferences preferences = context.
@@ -147,6 +148,7 @@ public class LoginPresenterCompl implements LoginPresenter {
 
 
                 Log.e(TAG,"Success");
+
             }
 
             @Override
@@ -157,7 +159,7 @@ public class LoginPresenterCompl implements LoginPresenter {
 
             }
         });
-
+                return isLogin;
     }
 
     @Override

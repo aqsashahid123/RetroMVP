@@ -7,7 +7,7 @@ package pf.aqsa.com.retromvp.Presenter;
 public interface LoginPresenter {
 
     boolean doLogin(String name, String passwd);
-    void doSignUp(String name, String passwd,String userName);
+    boolean doSignUp(String name, String passwd,String userName);
     void onLoginResult(boolean res);
     //public void moveToHome();
 

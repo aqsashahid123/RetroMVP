@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity implements HomeScreenPresent
                     moveToHome();
 
                 }
-                else {
+                if(loginStatus==false) {
                   //  homeScreenPresenter.moveToHome();
 //                    presenterCompl.goToHomeScreen();
-                   Toast.makeText(getApplicationContext(),"Login Failed",Toast.LENGTH_SHORT).show();
+                  // Toast.makeText(getApplicationContext(),"Login Failed",Toast.LENGTH_SHORT).show();
 
 
 
