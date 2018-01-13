@@ -11,24 +11,31 @@ import pf.aqsa.com.retromvp.View.ViewPresenter;
  * Created by AQSA SHaaPARR on 1/12/2018.
  */
 
-public class ViewPresenterCompl implements ViewPresenter {
+public class ViewPresenterCompl  {
 
 
     IView iv;
     Context context;
+    HomeScreenPresenter viewPresenter;
+    void moveToHomeScren(){
+
+       viewPresenter.moveToHome();
+
+
+    }
     public   ViewPresenterCompl(Context context){
 
         this.context=  context;
 
     }
 
-    @Override
-    public void MoveToTheHomeActivity(Context context) {
-
-        Intent intent = new Intent(context.getApplicationContext(), HomeScreen.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
-
-
-    }
+//    @Override
+//    public void MoveToTheHomeActivity(Context context) {
+//
+//        Intent intent = new Intent(context.getApplicationContext(), HomeScreen.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.startActivity(intent);
+//
+//
+//    }
 }

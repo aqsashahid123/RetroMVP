@@ -5,40 +5,71 @@ import android.content.SharedPreferences;
 
 import pf.aqsa.com.retromvp.View.HomeScreenViewPresenter;
 import pf.aqsa.com.retromvp.View.IView;
+import pf.aqsa.com.retromvp.View.ViewPresenter;
 
 /**
  * Created by AQSA SHaaPARR on 1/13/2018.
  */
 
-public class HomeScreenPresenterCompl extends HomeScreenViewPresenter implements HomeScreenPresenter {
-
+public class HomeScreenPresenterCompl implements ViewPresenter {
+//extends HomeScreenViewPresenter implements HomeScreenPresenter
    Context context;
+   HomeScreenPresenter presenter;
    public HomeScreenPresenterCompl(Context context) {
-    super(context);
+   // super(context);
     this.context = context;
 
    //
     }
 
-    @Override
-    public void onProfileClicked() {
+   public void goToHomeScreen(){
+            presenter.moveToHome();
+
 
     }
 
     @Override
-    public void onSettingsClicked() {
+    public void setUpTab() {
 
     }
 
-    @Override
-    public void setUpDrawer() {
+//    @Override
+//    public void moveToHome() {
+//
+//    }
 
-    }
+//    @Override
+//    public void moveToHome() {
+//
+//    }
 
- @Override
- public void onMenuNavCreated() {
+// @Override
+// public void moveToHome() {
+//
+//       presenter.moveToHome();
+//
 
-  HomeScreenPresenter hp = new HomeScreenPresenterCompl(context);
+// }
+
+//    @Override
+//    public void onProfileClicked() {
+//
+//    }
+//
+//    @Override
+//    public void onSettingsClicked() {
+//
+//    }
+//
+//    @Override
+//    public void setUpDrawer() {
+//
+//    }
+//
+// @Override
+// public void onMenuNavCreated() {
+//
+//  HomeScreenPresenter hp = new HomeScreenPresenterCompl(context);
 
 //  if (!isViewAttached()) {
 //   return;
@@ -63,5 +94,5 @@ public class HomeScreenPresenterCompl extends HomeScreenViewPresenter implements
 //  }
 
 
- }
+// }
 }

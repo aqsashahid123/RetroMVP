@@ -10,7 +10,7 @@ import pf.aqsa.com.retromvp.SignUpActivity;
  * Created by AQSA SHaaPARR on 1/12/2018.
  */
 
-public class IViewClass {
+public class IViewClass implements IView {
 
     public boolean onLoginResult(Boolean result) {
 
@@ -19,15 +19,22 @@ public class IViewClass {
     public void onSignUpResult(Boolean result, int code) {
 
     }
-    public void LaunchActivity(Context context){
 
-        Intent intent = new Intent(context.getApplicationContext(), SignUpActivity.class);
+    @Override
+    public void LaunchActivity(Context context) {
+                Intent intent = new Intent(context.getApplicationContext(), SignUpActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.getApplicationContext().startActivity(intent);
-
-
-
     }
+//    public void LaunchActivity(Context context){
+//
+//        Intent intent = new Intent(context.getApplicationContext(), SignUpActivity.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.getApplicationContext().startActivity(intent);
+//
+//
+//
+//    }
 
 
 }

@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenter;
+import pf.aqsa.com.retromvp.Presenter.HomeScreenPresenterCompl;
 import pf.aqsa.com.retromvp.Presenter.LoginPresenter;
 import pf.aqsa.com.retromvp.Presenter.LoginPresenterCompl;
 import pf.aqsa.com.retromvp.View.IView;
@@ -16,16 +19,19 @@ import pf.aqsa.com.retromvp.View.IViewClass;
 import pf.aqsa.com.retromvp.View.ViewPresenter;
 import pf.aqsa.com.retromvp.Presenter.ViewPresenterCompl;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeScreenPresenter {
 
 
     EditText etEmail,etPassword;
     Button btnLogin;
    // LoginPresenter presenter;
+    boolean loginStatus;
     LoginPresenter presenter;
     TextView tvSignUp;
     ViewPresenter viewPresenter;
+    HomeScreenPresenterCompl presenterCompl;
     IView iv;
+    HomeScreenPresenter homeScreenPresenter;
  //   LoginPresenterCompl loginPresenterCompl;
     private final static String TAG = "MainActivity";
     @Override
@@ -37,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         etPassword = (EditText) findViewById(R.id.etPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         tvSignUp = (TextView) findViewById(R.id.tvSignUp);
+     //  homeScreenPresenter = new HomeScreenPresenterCompl(this);
         final IViewClass iv = new IViewClass();
+        presenterCompl = new HomeScreenPresenterCompl(this);
         tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,18 +54,36 @@ public class MainActivity extends AppCompatActivity {
         });
 
         presenter = new LoginPresenterCompl(this);
-        viewPresenter = new ViewPresenterCompl(this);
+     //   viewPresenter = new ViewPresenterCompl(this);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                presenter.doLogin(etEmail.getText().toString(),etPassword.getText().toString());
+               loginStatus=  presenter.doLogin(etEmail.getText().toString(),etPassword.getText().toString());
+                if (loginStatus){
 
+                    moveToHome();
+
+                }
+                else {
+                  //  homeScreenPresenter.moveToHome();
+//                    presenterCompl.goToHomeScreen();
+                   Toast.makeText(getApplicationContext(),"Die",Toast.LENGTH_SHORT).show();
+
+
+
+                }
 
 
             }
         });
 
+    }
+
+    @Override
+    public void moveToHome() {
+        Intent intent = new Intent(getApplicationContext(),HomeScreen.class);
+        startActivity(intent);
     }
 
 //    @Override

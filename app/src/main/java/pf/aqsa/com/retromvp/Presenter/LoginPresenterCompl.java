@@ -31,6 +31,7 @@ public class LoginPresenterCompl implements LoginPresenter {
 
     Context context;
     IView iv;
+    boolean isLogin;
   public   LoginPresenterCompl(Context context){
     //  this.iv = iv;
       this.context=  context;
@@ -38,7 +39,7 @@ public class LoginPresenterCompl implements LoginPresenter {
   }
 
     @Override
-    public void doLogin(final String name, String passwd) {
+    public boolean doLogin(final String name, String passwd) {
 
         final RemoteInterface service = RemoteService.getClient().create(RemoteInterface.class);
 
@@ -53,7 +54,7 @@ public class LoginPresenterCompl implements LoginPresenter {
           //  ViewPresenterCompl vc = new ViewPresenterCompl(context);
 
                 if (!response.body().getId().isEmpty()){
-
+                    isLogin = true;
 
              //       IViewClass iv = new IViewClass();
 //                    iv.onLoginResult(true,1);
@@ -79,7 +80,7 @@ public class LoginPresenterCompl implements LoginPresenter {
                 else {
 
                     Toast.makeText(context.getApplicationContext(),"Login Failed",Toast.LENGTH_SHORT).show();
-
+                    isLogin = false;
 
                 }
               //  SharedPreferences preferences = context.
@@ -87,6 +88,7 @@ public class LoginPresenterCompl implements LoginPresenter {
 
 
                 Log.e(TAG,"Success");
+
             }
 
             @Override
@@ -97,7 +99,9 @@ public class LoginPresenterCompl implements LoginPresenter {
 
             }
         });
-    }
+
+        return isLogin;
+  }
 
     @Override
     public void doSignUp(String name, String passwd,String userName) {
@@ -123,9 +127,9 @@ public class LoginPresenterCompl implements LoginPresenter {
                     editor.putString("email",response.body().getEmail());
                     editor.putString("id",response.body().getId());
                     editor.apply();
-                    Intent intent = new Intent(context.getApplicationContext(), HomeScreen.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    context.getApplicationContext().startActivity(intent);
+//                    Intent intent = new Intent(context.getApplicationContext(), HomeScreen.class);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    context.getApplicationContext().startActivity(intent);
 
 
 //                    Toast.makeText(context.getApplicationContext(),String.valueOf(response.body().getEmail()),Toast.LENGTH_SHORT).show();
@@ -162,6 +166,8 @@ public class LoginPresenterCompl implements LoginPresenter {
     public void onLoginResult(boolean res) {
 
     }
+
+
 
 
     @Produce

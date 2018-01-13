@@ -12,10 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
-
-        </activity>
-        <activity android:name=".HomeScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,8 +20,12 @@
 
 
         </activity>
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".HomeScreen" >
 
+
+
+        </activity>
+        <activity android:name=".SignUpActivity">
 
 
 

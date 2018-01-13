@@ -8,6 +8,7 @@ import android.content.Context;
 
 public interface ViewPresenter {
 
-    public void MoveToTheHomeActivity(Context context);
+   // public void MoveToTheHomeActivity(Context context);
+    public void setUpTab();
 
 }

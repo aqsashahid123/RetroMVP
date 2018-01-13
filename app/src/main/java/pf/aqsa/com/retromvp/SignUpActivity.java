@@ -34,7 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
 
 
         presenter = new LoginPresenterCompl(this);
-        viewPresenter = new ViewPresenterCompl(this);
+      //  viewPresenter = new ViewPresenterCompl(this);
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override

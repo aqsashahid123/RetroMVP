@@ -7,9 +7,10 @@ package pf.aqsa.com.retromvp.Presenter;
 public interface HomeScreenPresenter {
 
 
-    public void onProfileClicked();
-    public void onSettingsClicked();
-    public void setUpDrawer();
-    void onMenuNavCreated();
+//    public void onProfileClicked();
+//    public void onSettingsClicked();
+//    public void setUpDrawer();
+//    void onMenuNavCreated();
+    public void moveToHome();
 
 }
