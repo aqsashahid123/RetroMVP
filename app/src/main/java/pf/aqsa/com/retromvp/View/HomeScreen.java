@@ -38,6 +38,7 @@ public class HomeScreen extends AppCompatActivity  {
         setContentView(R.layout.activity_home_screen);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("RetroMVP");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
 
        // presenter = new HomeScreenPresenterCompl(this);
         presenter = new HomeScreenViewPresenter(this);
@@ -89,8 +90,11 @@ public class HomeScreen extends AppCompatActivity  {
 
 
 
-        tvEmail.setText( prefs.getString("email",""));
-        tvName.setText( prefs.getString("userName",""));
+//        tvEmail.setText( prefs.getString("email",""));
+//        tvName.setText( prefs.getString("userName",""));
+///////////////////////////////////////////////////////////////////////////////////
+        tvEmail.setText( "EMAIL");
+        tvName.setText( "USERNAME");
 
 //        nav_view.setNavigationItemSelectedListener(
 //                new NavigationView.OnNavigationItemSelectedListener() {

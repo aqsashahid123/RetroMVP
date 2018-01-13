@@ -2,6 +2,9 @@ package pf.aqsa.com.retromvp.Presenter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,6 +15,7 @@ import android.widget.Toast;
 
 import pf.aqsa.com.retromvp.View.HomeScreen;
 import pf.aqsa.com.retromvp.R;
+import pf.aqsa.com.retromvp.View.MainActivity;
 import pf.aqsa.com.retromvp.View.PagerAdapter;
 
 /**
@@ -95,7 +99,18 @@ public class HomeScreenViewPresenter implements HomeScreenBasicMethods {
 
                 break;
 
+            case R.id.nav_logout:
+                mDrawer.closeDrawer(Gravity.RIGHT);
+                Toast.makeText(context.getApplicationContext(),"Logged Out",Toast.LENGTH_SHORT).show();
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext());
+                SharedPreferences.Editor editor= preferences.edit();
+                        editor.clear();
+                        editor.commit();
+                Intent intent = new Intent(context.getApplicationContext(), MainActivity.class);
+               intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+               context.getApplicationContext().startActivity(intent);
 
+                break;
 
     }
 

@@ -24,6 +24,12 @@
 
 
             />
+        <item
+            android:title="Log Out"
+            android:id="@+id/nav_logout"
+
+
+            />
 
 
 
