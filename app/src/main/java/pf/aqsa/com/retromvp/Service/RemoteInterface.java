@@ -15,20 +15,30 @@ import retrofit2.http.Query;
 public interface RemoteInterface {
 
     @FormUrlEncoded
-    @POST("api.php")
+    @POST("login.php")
     Call<ServerResponse> post(
-            @Field("method") String method,
-            @Field("username") String username,
+          //  @Field("method") String method,
+            @Field("email") String username,
             @Field("password") String password
     );
 
     //This method is used for "GET"
-    @GET("api.php")
-    Call<ServerResponse> get(
-            @Query("method") String method,
-            @Query("username") String username,
-            @Query("password") String password
+//    @GET("api.php")
+//    Call<ServerResponse> get(
+//            @Query("method") String method,
+//            @Query("username") String username,
+//            @Query("password") String password
+//    );
+
+    @FormUrlEncoded
+    @POST("sign_up.php")
+    Call<ServerResponse> signUp(
+            @Field("userName") String userName,
+            @Field("email") String username,
+            @Field("password") String password
     );
+
+
 
 
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:title="Dashboard"
+            android:id="@+id/nav_profile"
+
+            />
+
+
+        <!--<item-->
+        <!--android:title="Reports"-->
+        <!--android:id="@+id/showReports"-->
+        <!--android:icon="@drawable/icon_reports"-->
+
+
+        <!--/>-->
+        <item
+            android:title="Graphs"
+            android:id="@+id/nav_settings"
+
+
+            />
+
+
+
+
+    </group>
+</menu>

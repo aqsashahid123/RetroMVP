@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RemoteService {
-public static final String BASE_URL = "http://192.168.10.24/retro/";
+public static final String BASE_URL = "http://192.168.8.102/OneByteTest/";
 
 
 public static Retrofit getClient(){

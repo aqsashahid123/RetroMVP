@@ -8,7 +8,7 @@ public interface ServerResponseInterface {
 
     String getUsername();
 
-    String getPassword();
+    String getEmail();
 
 
 

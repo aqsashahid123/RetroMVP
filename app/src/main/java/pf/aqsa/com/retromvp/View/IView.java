@@ -6,7 +6,9 @@ package pf.aqsa.com.retromvp.View;
 
 public interface IView {
 
-    public void onLoginResult(Boolean result, int code);
-    public void onSignUpResult(Boolean result, int code);
+//    public void onLoginResult(Boolean result, int code);
+//    public void onSignUpResult(Boolean result, int code);
+
+    void closeNavigationDrawer();
 
 }

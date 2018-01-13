@@ -1,5 +1,6 @@
 package pf.aqsa.com.retromvp.Model;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -8,21 +9,36 @@ import com.google.gson.annotations.SerializedName;
 
 public class ServerResponse implements ServerResponseInterface{
 
-
-    @SerializedName("returned_username")
-    private String username;
-    @SerializedName("returned_password")
+//    @SerializedName("id")
+//    private int id;
+//    @SerializedName("name")
+//    private String username;
+//    @SerializedName("email")
+//    private String email;
+//    @SerializedName("password")
+//    private String message;
+@SerializedName("id")
+@Expose
+private String id;
+    @SerializedName("name")
+    @Expose
+    private String name;
+    @SerializedName("email")
+    @Expose
+    private String email;
+    @SerializedName("password")
+    @Expose
     private String password;
-    @SerializedName("message")
-    private String message;
-    @SerializedName("response_code")
-    private int responseCode;
+    @SerializedName("date")
+    @Expose
+    private String date;
 
-    public ServerResponse(String username, String password, String message, int responseCode){
-        this.username = username;
-        this.password = password;
-        this.message = message;
-        this.responseCode = responseCode;
+
+    public ServerResponse(String username, String password, String message, String responseCode){
+        this.name = username;
+        this.email = password;
+//        this.message = message;
+        this.id = responseCode;
     }
 
 
@@ -30,35 +46,34 @@ public class ServerResponse implements ServerResponseInterface{
     /////////////////////////
     @Override
     public String getUsername() {
-        return username;
+        return name;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.name = username;
     }
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public String getEmail() {
+        return email;
     }
 
-    public String getMessage() {
-        return message;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+//    public String getMessage() {
+//        return message;
+//    }
+//
+//    public void setMessage(String message) {
+//        this.message = message;
+//    }
+
+    public String getId() {
+        return id;
     }
 
-    public int getResponseCode() {
-        return responseCode;
-    }
-
-    public void setResponseCode(int responseCode) {
-        this.responseCode = responseCode;
+    public void setId(String id) {
+        this.id = id;
     }
 
 
